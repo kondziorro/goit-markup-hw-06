@@ -423,7 +423,7 @@ ul {
 .modal-box {
   position: relative;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   padding: 40px;
   text-align: center;
   border-radius: var(--border-radius);
@@ -501,6 +501,13 @@ ul {
   color: #75757580;
 }
 
+.modal-form-agreement-box {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: 14px;
+}
+
 .modal-form-agreement-checkbox {
   position: absolute;
   height: 15px;
@@ -534,6 +541,8 @@ ul {
 .modal-form-agreement-label {
   color: var(--brand-color-gray);
   text-align: center;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 .modal-form-link {
@@ -652,6 +661,7 @@ ul {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--brand-color-white);
+  font-size: 14px;
 }
 
 .newsletter-wrapper {
@@ -733,10 +743,7 @@ ul {
   margin: 0px;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.portfolio-item:hover {
-  box-shadow: 0px 1px;
+  transition: box-shadow var(--transition-set);
 }
 
 .list-item {
@@ -749,11 +756,7 @@ ul {
   gap: 30px;
 }
 
-.portfolio-card {
-  transition: box-shadow var(--transition-set);
-}
-
-.portfolio-card:hover {
+.portfolio-project:is(:hover, :focus) {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -783,6 +786,6 @@ ul {
   transition: top var(--transition-set);
 }
 
-.portfolio-card:hover .portfolio-cover {
+.portfolio-project:is(:hover, :focus) .portfolio-cover {
   top: 0;
 }
